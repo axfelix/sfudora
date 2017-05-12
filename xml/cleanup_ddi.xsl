@@ -23,9 +23,17 @@
   <xsl:template match="ddi:codeBook">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
+      <xsl:apply-templates select="ddi:docDscr"/>
       <xsl:apply-templates select="ddi:stdyDscr"/>
       <xsl:apply-templates select="ddi:fileDscr"/>
       <xsl:apply-templates select="ddi:otherMat"/>
+    </xsl:copy>
+  </xsl:template>
+
+  <!-- Reorder ddi:stdyDscr child elements -->
+  <xsl:template match="ddi:docDscr">
+    <xsl:copy>
+      <xsl:apply-templates select="ddi:citation"/>
     </xsl:copy>
   </xsl:template>
   
