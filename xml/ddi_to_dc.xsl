@@ -59,9 +59,9 @@
         </dc:rights>
       </xsl:for-each>
       <xsl:for-each select="//codeBook:otherMat/codeBook:notes">
-        <dc:isPartOf>
+        <dc:relation>
           <xsl:value-of select="."/>
-        </dc:isPartOf>
+        </dc:relation>
       </xsl:for-each>
     </oai_dc:dc>
   </xsl:template>
